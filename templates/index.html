@@ -6,101 +6,122 @@
 -->
 <html>
 	<head>
-		<title>Overflow by HTML5 UP</title>
+		<title>Data Augmentation by HBKU and QCRI</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		<!-- <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript> -->
+		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='css/noscript.css') }}"></noscript>
 	</head>
 	<body class="is-preload">
 
 		<!-- Header -->
 			<section id="header">
 				<header>
-					<h1>Overflow</h1>
-					<p>By HTML5 UP</p>
+					<h1>AUGMENT</h1>
+					<p>HBKU & QCRI</p>
 				</header>
 				<footer>
-					<a href="#banner" class="button style2 scrolly-middle">Proceed as anticipated</a>
+					<a href="#banner" class="button style2 scrolly-middle">The library</a>
 				</footer>
 			</section>
 
 		<!-- Banner -->
 			<section id="banner">
 				<header>
-					<h2>This is Overflow</h2>
+					<h2>This is Data Augment</h2>
 				</header>
-				<p>A brand new site template designed by <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net">HTML5 UP</a>.<br />
-				It’s responsive, built on HTML5/CSS3, and entirely free<br />
-				under the <a href="http://html5up.net/license">Creative Commons license</a>.</p>
+				<p>An improved data augmentation technique. <br/> Uses multiple points from the minority class to generate synthetic data points<br/>Ensures correct positioning of augmented data points. <br/>Insulated to suspected outliers.<br/>
 				<footer>
-					<a href="#first" class="button style2 scrolly">Act on this message</a>
+					<a href="#first" class="button style2 scrolly">More</a>
 				</footer>
 			</section>
 
 		<!-- Feature 1 -->
 			<article id="first" class="container box style1 right">
-				<a href="#" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
+				<a href="#" class="image fit"><img src="{{url_for('static', filename='imgs/pic01.png')}}"  alt="" /></a>
+
+
 				<div class="inner">
 					<header>
-						<h2>Lorem ipsum<br />
-						dolor sit amet</h2>
+						<h2>Identifying<br />
+						denser areas</h2>
 					</header>
-					<p>Tortor faucibus ullamcorper nec tempus purus sed penatibus. Lacinia pellentesque eleifend vitae est elit tristique velit tempus etiam.</p>
+					<p>Our algorithm finds the points that are presnt in high density areas using a search sort mechanism</p>
 				</div>
 			</article>
 
 		<!-- Feature 2 -->
 			<article class="container box style1 left">
-				<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+				<a href="#" class="image fit"><img src="{{url_for('static', filename='imgs/pic02.png')}}" alt="" /></a>
 				<div class="inner">
 					<header>
-						<h2>Mollis posuere<br />
-						lectus lacus</h2>
+						<h2>Handling<br />
+						outliers</h2>
 					</header>
-					<p>Rhoncus mattis egestas sed fusce sodales rutrum et etiam ullamcorper. Etiam egestas scelerisque ac duis magna lorem ipsum dolor.</p>
+					<p>The algorithm is able to identify outliers and ignore them in the process of creating atificial points.</p>
 				</div>
 			</article>
 
 		<!-- Portfolio -->
 			<article class="container box style2">
 				<header>
-					<h2>Magnis parturient</h2>
-					<p>Justo phasellus et aenean dignissim<br />
-					placerat cubilia purus lectus.</p>
+					<h2>Try it out</h2>
+					<p>Install it as python library using pip install<br />
+						For details read the <a href="https://augmentdatalib-docs.readthedocs.io/en/latest/">docs</a><br/>
+					Or, use the form below to get your augmented balanced dataset.</p>
 				</header>
-				<div class="inner gallery">
+				<!-- <div class="inner gallery">
 					<div class="row gtr-0">
-						<div class="col-3 col-12-mobile"><a href="images/fulls/01.jpg" class="image fit"><img src="images/thumbs/01.jpg" alt="" title="Ad infinitum" /></a></div>
-						<div class="col-3 col-12-mobile"><a href="images/fulls/02.jpg" class="image fit"><img src="images/thumbs/02.jpg" alt="" title="Dressed in Clarity" /></a></div>
-						<div class="col-3 col-12-mobile"><a href="images/fulls/03.jpg" class="image fit"><img src="images/thumbs/03.jpg" alt="" title="Raven" /></a></div>
-						<div class="col-3 col-12-mobile"><a href="images/fulls/04.jpg" class="image fit"><img src="images/thumbs/04.jpg" alt="" title="I'll have a cup of Disneyland, please" /></a></div>
+						<div class="col-3 col-12-mobile"><a href="images/fulls/01.jpg')}}" class="image fit"><img src="{{url_for('static', filename='imgs/thumbs/01.jpg')}}" alt="" title="Ad infinitum" /></a></div>
+						<div class="col-3 col-12-mobile"><a href="images/fulls/02.jpg')}}" class="image fit"><img src="{{url_for('static', filename='imgs/thumbs/02.jpg')}}" alt="" title="Dressed in Clarity" /></a></div>
+						<div class="col-3 col-12-mobile"><a href="images/fulls/03.jpg')}}" class="image fit"><img src="{{url_for('static', filename='imgs/thumbs/03.jpg')}}" alt="" title="Raven" /></a></div>
+						<div class="col-3 col-12-mobile"><a href="images/fulls/04.jpg')}}" class="image fit"><img src="{{url_for('static', filename='imgs/thumbs/04.jpg')}}" alt="" title="I'll have a cup of Disneyland, please" /></a></div>
 					</div>
 					<div class="row gtr-0">
-						<div class="col-3 col-12-mobile"><a href="images/fulls/05.jpg" class="image fit"><img src="images/thumbs/05.jpg" alt="" title="Cherish" /></a></div>
-						<div class="col-3 col-12-mobile"><a href="images/fulls/06.jpg" class="image fit"><img src="images/thumbs/06.jpg" alt="" title="Different." /></a></div>
-						<div class="col-3 col-12-mobile"><a href="images/fulls/07.jpg" class="image fit"><img src="images/thumbs/07.jpg" alt="" title="History was made here" /></a></div>
-						<div class="col-3 col-12-mobile"><a href="images/fulls/08.jpg" class="image fit"><img src="images/thumbs/08.jpg" alt="" title="People come and go and walk away" /></a></div>
+						<div class="col-3 col-12-mobile"><a href="images/fulls/05.jpg')}}" class="image fit"><img src="{{url_for('static', filename='imgs/thumbs/05.jpg')}}" alt="" title="Cherish" /></a></div>
+						<div class="col-3 col-12-mobile"><a href="images/fulls/06.jpg')}}" class="image fit"><img src="{{url_for('static', filename='imgs/thumbs/06.jpg')}}" alt="" title="Different." /></a></div>
+						<div class="col-3 col-12-mobile"><a href="images/fulls/07.jpg')}}" class="image fit"><img src="{{url_for('static', filename='imgs/thumbs/07.jpg')}}" alt="" title="History was made here" /></a></div>
+						<div class="col-3 col-12-mobile"><a href="images/fulls/08.jpg')}}" class="image fit"><img src="{{url_for('static', filename='imgs/thumbs/08.jpg')}}" alt="" title="People come and go and walk away" /></a></div>
 					</div>
-				</div>
+				</div> -->
 			</article>
 
 		<!-- Contact -->
 			<article class="container box style3">
 				<header>
-					<h2>Nisl sed ultricies</h2>
-					<p>Diam dignissim lectus eu ornare volutpat orci.</p>
+					<h2>Send your CSV file to us and get the balanced dataset in your mailbox</h2>
+					<p>Fill up the form below with the parameters and submit.<br/>
+					Please make sure your csv file does not have any headers, or empty cells.<br/>
+					All values must be numeric<br/>
+					Class labels must be the last column.
+
+					</p>
 				</header>
-				<form method="post" action="#">
+				<form action="/submit_dataset" method="post" enctype="multipart/form-data">
 					<div class="row gtr-50">
 						<div class="col-6 col-12-mobile"><input type="text" class="text" name="name" placeholder="Name" /></div>
 						<div class="col-6 col-12-mobile"><input type="text" class="text" name="email" placeholder="Email" /></div>
+
+						<div class="col-12"><input type="text" class="text" name="N" placeholder="Number of artificial points" /></div>
+						<div class="col-12"><input type="text" class="text" name="k" placeholder="Number of neighbors to be used(default 5)[1-10]" /></div>
+
+						<div class="col-12"><input type="text" class="text" name="randmx" placeholder="Maximum distance(default 0.5)[0.01-1]" /></div>
+
+						<div class="col-12"><input type="text" class="text" name="d_t" placeholder="Distance threshold(default 0.5)[0.01-0.9]" /></div>
+
+						<div class="col-12"><input type="file"
+       					id="file" name="file" 
+       					accept=".csv"></div>
+
+
 						<div class="col-12">
-							<textarea name="message" placeholder="Message"></textarea>
+							<textarea name="message" placeholder="Any message for the developers"></textarea>
 						</div>
 						<div class="col-12">
 							<ul class="actions">
-								<li><input type="submit" value="Send Message" /></li>
+								<li><input type="submit" value="Send File" /></li>
 							</ul>
 						</div>
 					</div>
@@ -258,12 +279,12 @@
 
 		<section id="footer">
 			<ul class="icons">
-				<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-				<li><a href="#" class="icon brands fa-google-plus-g"><span class="label">Google+</span></a></li>
-				<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
-				<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-				<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://twitter.com/indian4harmony" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="https://www.facebook.com/ashhadul.islam" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+				<li><a href="mailto: ashhadulislam@gmail.com" class="icon brands fa-google-plus-g"><span class="label">Google+</span></a></li>
+				<!-- <li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
+				<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li> -->
+				<li><a href="https://www.linkedin.com/in/ashhadul-islam-b508581a/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 			</ul>
 			<div class="copyright">
 				<ul class="menu">
@@ -273,13 +294,26 @@
 		</section>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script language="Javascript" src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+			<!-- <script src="assets/js/jquery.min.js"></script> -->
+			<script language="Javascript" src="{{url_for('static', filename='js/jquery.scrolly.min.js')}}"></script>
+			<!-- <script src="assets/js/jquery.scrolly.min.js"></script> -->
+
+
+			<!-- <script src="assets/js/jquery.poptrox.min.js"></script> -->
+			<script language="Javascript" src="{{url_for('static', filename='js/jquery.poptrox.min.js')}}"></script>
+
+			<!-- <script src="assets/js/browser.min.js"></script> -->
+			<script language="Javascript" src="{{url_for('static', filename='js/browser.min.js')}}"></script>
+
+			<!-- <script src="assets/js/breakpoints.min.js"></script> -->
+			<script language="Javascript" src="{{url_for('static', filename='js/breakpoints.min.js')}}"></script>
+
+			<!-- <script src="assets/js/util.js"></script> -->
+			<script language="Javascript" src="{{url_for('static', filename='js/util.js')}}"></script>
+
+			<!-- <script src="assets/js/main.js"></script> -->
+			<script language="Javascript" src="{{url_for('static', filename='js/main.js')}}"></script>
 
 	</body>
 </html>
